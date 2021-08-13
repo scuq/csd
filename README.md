@@ -1,0 +1,3 @@
+# Csd
+
+central session directory
