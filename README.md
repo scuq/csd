@@ -52,7 +52,7 @@ pyinstaller cmk_pull_hosts.py --onefile
 
 copy the .exe form the .\dist\folder to the `csd` directory.
 
-Create a new button bar button or command manager command:
+Create a new button bar button or command manager command pointing to the script `scrt_sync_sessions.py`
 
 ![image](https://user-images.githubusercontent.com/10185017/129462360-698036a6-0bb1-4395-a0f6-355d847127ee.png)
 
