@@ -1,0 +1,34 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.languageServer": "Pylance",
+		"python.linting.enabled": true,
+		"python.linting.pylintEnabled": true,
+		"python.linting.pylintArgs": [
+			"--extension-pkg-whitelist=PySide2",
+			"--module-naming-style=snake_case",
+			"--class-naming-style=PascalCase",
+			"--function-naming-style=camelCase",
+			"--const-naming-style=camelCase",
+			"--method-naming-style=camelCase",
+			"--variable-naming-style=camelCase",
+			"--attr-naming-style=camelCase",
+			"--disable=W0611",
+			"--disable=F0401",
+			"--disable=C0413",
+			"--disable=C0411",
+			"--disable=C0114",
+			"--disable=C0115",
+			"--disable=C0116",
+			"--additional-builtins=crt"
+		],
+		"editor.tabSize": 4,
+		"editor.insertSpaces": true,
+		"cSpell.diagnosticLevel": "Hint"
+	}
+
+}

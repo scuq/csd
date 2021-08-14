@@ -11,8 +11,6 @@ import sys
 
 def getCmkScrtHosts(api):
 
-    ips = []
-
     _url = "{}".format(api["url"])
 
     response = requests.get(_url, headers=api["headers"], verify=True)
@@ -23,15 +21,14 @@ def getCmkScrtHosts(api):
 def main():
 
     try:
-      url = sys.argv[1:][0]
+        url = sys.argv[1:][0]
     except IndexError:
-      sys.exit(1)
+        sys.exit(1)
 
     if not url:
-      sys.exit(1)
+        sys.exit(1)
     if len(url) <= 0:
-      sys.exit(1)
-  
+        sys.exit(1)
 
     cmk={}
     cmk["headers"] = {"Accept": "application/json; charset=utf-8",
@@ -42,4 +39,4 @@ def main():
     getCmkScrtHosts(cmk)
 
 if __name__ == '__main__':
-            main()
+    main()
