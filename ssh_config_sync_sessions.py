@@ -1,7 +1,4 @@
-# $language = "Python"
-# $interface = "1.0"
-
-# thx to: https://github.com/lanbugs/check_mk_to_securecrt_export
+#!/usr/bin/env python3
 
 import os
 import requests
@@ -21,9 +18,6 @@ def getCmkScrtHosts(api):
     return response.text
 
 
-#####################################
-## START
-#####################################
 def main():
 
     try:
@@ -60,17 +54,21 @@ def main():
         #crt.Dialog.MessageBox(str(type(host)),"session")
 
         hostname = hostList[0]
-        ip = hostList[1]
-        path = hostList[2]
+        ipAddress = hostList[1]
         additionalProperties = hostList[3]
         if "scrtSshUsername" in additionalProperties:
             username = additionalProperties["scrtSshUsername"]
         if "scrtPort" in additionalProperties:
             port = additionalProperties["scrtPort"]
 
-        print (csdSshConfigFileStr)
-        csdSshConfigFile.write("Host {}\n    User {}\n    HostName {}\n    Port {}\n\n".format(hostname,username,ip,port))
-    
+        csdSshConfigFile.write("Host {}\n    User {}\n    HostName {}\n    Port {}\n\n".format(
+                hostname,
+                username,
+                ipAddress,
+                port
+                )
+            )
+
     csdSshConfigFile.close()
 
 

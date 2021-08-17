@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # thx to: https://github.com/lanbugs/check_mk_to_securecrt_export
 # to encrypted exe:
